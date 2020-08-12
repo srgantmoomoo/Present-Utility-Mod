@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
-<fullyQualifiedTypeName name="me.present.modules.Module"/>
 <fullyQualifiedTypeName name="net.java.games.input.Keyboard"/>
-<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
 <fullyQualifiedTypeName name="me.present.movement.Sprint"/>
 <fullyQualifiedTypeName name="java.awt.Event"/>
 <fullyQualifiedTypeName name="javax.swing.event.DocumentEvent.EventType"/>
-<fullyQualifiedTypeName name="me.present.events.Event"/>
-<fullyQualifiedTypeName name="me.present.listeners.EventUpdate"/>
 <fullyQualifiedTypeName name="me.present.events.EventType"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 <fullyQualifiedTypeName name="me.present.ui.UIRenderer"/>
 <fullyQualifiedTypeName name="me.present.Present"/>
 <fullyQualifiedTypeName name="me.present.movement.Sneak"/>
+<fullyQualifiedTypeName name="me.present.modules.Module"/>
+<fullyQualifiedTypeName name="me.present.events.Event"/>
+<fullyQualifiedTypeName name="me.present.listeners.EventUpdate"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+<fullyQualifiedTypeName name="me.present.movement.Fly"/>
+<fullyQualifiedTypeName name="me.present.render.FullBright"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="me.present.listeners.EventRenderGUI"/>
+<fullyQualifiedTypeName name="me.present.render.TabGUI"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.FontRenderer"/>
+<fullyQualifiedTypeName name="me.present.listeners.EventKey"/>
+<fullyQualifiedTypeName name="me.present.modules.Module.Category"/>
 </qualifiedTypeNameHistroy>

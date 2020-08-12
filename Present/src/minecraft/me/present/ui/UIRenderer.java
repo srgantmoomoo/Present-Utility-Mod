@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import me.present.Present;
+import me.present.listeners.EventRenderGUI;
 import me.present.modules.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
@@ -33,13 +34,13 @@ public class UIRenderer extends Gui {
 		ScaledResolution sr = new ScaledResolution(mc);
 		FontRenderer fr = mc.fontRendererObj;
 		
-		Collections.sort(Present.modules, new ModuleComparator()); 
+		Collections.sort(Present.modules, new ModuleComparator());
 		
-		fr.drawStringWithShadow(Present.clientName + " " + Present.clientVersion, 1, 1, 0xffffff);
+		fr.drawStringWithShadow(Present.clientName + " " + Present.clientVersion, 1, 2, 0xffffff);
 		
 		int count = 0;
 		for(Module module : Present.modules) {
-			if(!module.isEnabled())
+			if(!module.isEnabled() || module.name.equals("TabGUI"))
 				continue;
 			
 			double offset1 = count*(fr.FONT_HEIGHT + 1);
@@ -52,6 +53,8 @@ public class UIRenderer extends Gui {
 			count++;
 			
 		}
+		
+		Present.onEvent(new EventRenderGUI());
 	}
 	
 }
