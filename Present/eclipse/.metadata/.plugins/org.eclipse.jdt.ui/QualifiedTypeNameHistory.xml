@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
+<fullyQualifiedTypeName name="me.present.modules.Module"/>
+<fullyQualifiedTypeName name="net.java.games.input.Keyboard"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+<fullyQualifiedTypeName name="me.present.movement.Sprint"/>
+<fullyQualifiedTypeName name="java.awt.Event"/>
+<fullyQualifiedTypeName name="javax.swing.event.DocumentEvent.EventType"/>
+<fullyQualifiedTypeName name="me.present.events.Event"/>
+<fullyQualifiedTypeName name="me.present.Present"/>
+<fullyQualifiedTypeName name="me.present.listeners.EventUpdate"/>
+<fullyQualifiedTypeName name="me.present.events.EventType"/>
+<fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+</qualifiedTypeNameHistroy>

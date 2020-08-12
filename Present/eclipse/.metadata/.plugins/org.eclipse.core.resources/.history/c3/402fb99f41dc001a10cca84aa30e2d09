@@ -1,0 +1,14 @@
+package me.present;
+
+import org.lwjgl.opengl.Display;
+
+public class present {
+	
+	public static String clientName = "Present";
+	public static String clientVersion = "0.2";
+	
+	public static void startup() {
+		Display.setTitle(clientName + " " + clientVersion);
+	}
+
+}

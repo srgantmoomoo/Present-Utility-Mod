@@ -1,0 +1,5 @@
+package me.present.listeners;
+
+public class EventUpdate {
+
+}
