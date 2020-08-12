@@ -8,8 +8,11 @@
 <fullyQualifiedTypeName name="java.awt.Event"/>
 <fullyQualifiedTypeName name="javax.swing.event.DocumentEvent.EventType"/>
 <fullyQualifiedTypeName name="me.present.events.Event"/>
-<fullyQualifiedTypeName name="me.present.Present"/>
 <fullyQualifiedTypeName name="me.present.listeners.EventUpdate"/>
 <fullyQualifiedTypeName name="me.present.events.EventType"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="me.present.ui.UIRenderer"/>
+<fullyQualifiedTypeName name="me.present.Present"/>
+<fullyQualifiedTypeName name="me.present.movement.Sneak"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.FontRenderer"/>
 </qualifiedTypeNameHistroy>

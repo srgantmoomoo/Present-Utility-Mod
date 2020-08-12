@@ -1,1 +1,8 @@
-{}
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "beaches": "2020-08-12 15:04:52 -0400"
+    },
+    "done": false
+  }
+}
