@@ -1,6 +1,8 @@
 package optifine;
 
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
+import me.present.ui.MainMenu;
+
 import java.io.Reader;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -324,7 +326,7 @@ public class Reflector
     private static boolean logVanilla = logEntry("*** Reflector Vanilla ***");
     public static ReflectorClass ChunkProviderClient = new ReflectorClass(ChunkProviderClient.class);
     public static ReflectorField ChunkProviderClient_chunkMapping = new ReflectorField(ChunkProviderClient, Long2ObjectMap.class);
-    public static ReflectorClass GuiMainMenu = new ReflectorClass(GuiMainMenu.class);
+    public static ReflectorClass GuiMainMenu = new ReflectorClass(MainMenu.class);
     public static ReflectorField GuiMainMenu_splashText = new ReflectorField(GuiMainMenu, String.class);
     public static ReflectorClass LegacyV2Adapter = new ReflectorClass(LegacyV2Adapter.class);
     public static ReflectorField LegacyV2Adapter_pack = new ReflectorField(LegacyV2Adapter, IResourcePack.class);

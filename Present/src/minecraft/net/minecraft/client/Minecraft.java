@@ -15,6 +15,7 @@ import com.mojang.authlib.properties.PropertyMap;
 import com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
 
 import me.present.Present;
+import me.present.ui.MainMenu;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -610,11 +611,11 @@ public class Minecraft implements IThreadListener, ISnooperInfo
         
         if (this.serverName != null)
         {
-            this.displayGuiScreen(new GuiConnecting(new GuiMainMenu(), this, this.serverName, this.serverPort));
+            this.displayGuiScreen(new GuiConnecting(new MainMenu(), this, this.serverName, this.serverPort));
         }
         else
         {
-            this.displayGuiScreen(new GuiMainMenu());
+            this.displayGuiScreen(new MainMenu());
         }
 
         this.renderEngine.deleteTexture(this.mojangLogo);
@@ -1056,14 +1057,14 @@ public class Minecraft implements IThreadListener, ISnooperInfo
 
         if (guiScreenIn == null && this.world == null)
         {
-            guiScreenIn = new GuiMainMenu();
+            guiScreenIn = new MainMenu();
         }
         else if (guiScreenIn == null && this.player.getHealth() <= 0.0F)
         {
             guiScreenIn = new GuiGameOver((ITextComponent)null);
         }
 
-        if (guiScreenIn instanceof GuiMainMenu || guiScreenIn instanceof GuiMultiplayer)
+        if (guiScreenIn instanceof MainMenu || guiScreenIn instanceof GuiMultiplayer)
         {
             this.gameSettings.showDebugInfo = false;
             this.ingameGUI.getChatGUI().clearChatMessages(true);

@@ -3,6 +3,9 @@ package net.minecraft.realms;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.mojang.authlib.GameProfile;
 import com.mojang.util.UUIDTypeAdapter;
+
+import me.present.ui.MainMenu;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -116,7 +119,7 @@ public class Realms
 
     public static boolean inTitleScreen()
     {
-        return Minecraft.getMinecraft().currentScreen != null && Minecraft.getMinecraft().currentScreen instanceof GuiMainMenu;
+        return Minecraft.getMinecraft().currentScreen != null && Minecraft.getMinecraft().currentScreen instanceof MainMenu;
     }
 
     public static void deletePlayerTag(File p_deletePlayerTag_0_)

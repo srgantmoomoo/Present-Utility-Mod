@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="me.present.events.EventType"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 <fullyQualifiedTypeName name="me.present.ui.UIRenderer"/>
-<fullyQualifiedTypeName name="me.present.Present"/>
 <fullyQualifiedTypeName name="me.present.movement.Sneak"/>
 <fullyQualifiedTypeName name="me.present.modules.Module"/>
 <fullyQualifiedTypeName name="me.present.events.Event"/>
@@ -16,12 +15,19 @@
 <fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
 <fullyQualifiedTypeName name="me.present.movement.Fly"/>
 <fullyQualifiedTypeName name="me.present.render.FullBright"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="me.present.listeners.EventRenderGUI"/>
 <fullyQualifiedTypeName name="me.present.render.TabGUI"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.FontRenderer"/>
 <fullyQualifiedTypeName name="me.present.listeners.EventKey"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="me.present.modules.Module.Category"/>
+<fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
+<fullyQualifiedTypeName name="me.present.ui.MainMenu"/>
+<fullyQualifiedTypeName name="me.present.Present"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiWorldSelection"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiOptions"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiLanguage"/>
 </qualifiedTypeNameHistroy>
