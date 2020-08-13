@@ -1,0 +1,94 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 8/12/20 11:54 PM
+Description: Unexpected error
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at me.present.render.TabGUI.onEvent(TabGUI.java:93)
+	at me.present.Present.onEvent(Present.java:42)
+	at me.present.Present.keyPress(Present.java:47)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2067)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1916)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1182)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:475)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at me.present.render.TabGUI.onEvent(TabGUI.java:93)
+	at me.present.Present.onEvent(Present.java:42)
+	at me.present.Present.keyPress(Present.java:47)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2067)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player669'/92, l='MpServer', x=288.20, y=75.00, z=341.91]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 44420 game time, 2411 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 35 total; [EntityBat['Bat'/197, l='MpServer', x=338.71, y=59.69, z=290.56], EntityBat['Bat'/198, l='MpServer', x=343.26, y=39.19, z=314.89], EntityCreeper['Creeper'/199, l='MpServer', x=339.14, y=28.00, z=327.27], EntitySkeleton['Skeleton'/200, l='MpServer', x=343.50, y=20.00, z=329.50], EntityCreeper['Creeper'/201, l='MpServer', x=338.22, y=28.00, z=324.40], EntityRabbit['Rabbit'/138, l='MpServer', x=252.87, y=64.00, z=311.03], EntityRabbit['Rabbit'/202, l='MpServer', x=350.60, y=70.00, z=344.37], EntityPlayerSP['Player669'/92, l='MpServer', x=288.20, y=75.00, z=341.91], EntitySkeleton['Skeleton'/205, l='MpServer', x=355.50, y=52.00, z=303.50], EntityHusk['Husk'/206, l='MpServer', x=354.77, y=72.00, z=311.83], EntityRabbit['Rabbit'/207, l='MpServer', x=361.50, y=69.00, z=349.50], EntityRabbit['Rabbit'/208, l='MpServer', x=354.41, y=68.00, z=347.50], EntitySpider['Spider'/209, l='MpServer', x=359.50, y=54.00, z=418.50], EntityWitch['Witch'/146, l='MpServer', x=260.50, y=50.00, z=265.50], EntityRabbit['Rabbit'/147, l='MpServer', x=266.50, y=69.00, z=286.22], EntityRabbit['Rabbit'/148, l='MpServer', x=266.50, y=69.00, z=285.42], EntityRabbit['Rabbit'/149, l='MpServer', x=268.52, y=65.06, z=306.43], EntityRabbit['Rabbit'/151, l='MpServer', x=260.75, y=68.00, z=418.98], EntityRabbit['Rabbit'/156, l='MpServer', x=273.38, y=68.00, z=289.50], EntityItem['item.item.bone'/157, l='MpServer', x=275.72, y=71.00, z=363.92], EntitySkeleton['Skeleton'/159, l='MpServer', x=294.50, y=62.00, z=281.50], EntitySpider['Spider'/160, l='MpServer', x=300.50, y=23.00, z=305.50], EntityRabbit['Rabbit'/161, l='MpServer', x=302.56, y=75.00, z=326.34], EntityRabbit['Rabbit'/171, l='MpServer', x=311.48, y=70.00, z=286.37], EntityBat['Bat'/172, l='MpServer', x=308.33, y=22.10, z=313.57], EntityCreeper['Creeper'/173, l='MpServer', x=301.73, y=62.08, z=315.77], EntitySkeleton['Skeleton'/174, l='MpServer', x=314.53, y=43.00, z=372.70], EntityBat['Bat'/180, l='MpServer', x=325.55, y=60.86, z=288.85], EntityRabbit['Rabbit'/181, l='MpServer', x=326.52, y=75.00, z=315.33], EntityBat['Bat'/119, l='MpServer', x=234.66, y=45.83, z=383.98], EntityRabbit['Rabbit'/120, l='MpServer', x=231.97, y=65.00, z=390.16], EntityRabbit['Rabbit'/121, l='MpServer', x=229.50, y=64.00, z=389.50], EntityRabbit['Rabbit'/122, l='MpServer', x=227.25, y=64.28, z=386.03], EntityRabbit['Rabbit'/123, l='MpServer', x=232.50, y=66.00, z=408.50], EntityRabbit['Rabbit'/124, l='MpServer', x=233.32, y=66.00, z=408.94]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:520)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2994)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:504)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_261, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 813565088 bytes (775 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1660 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 446.14, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 2600X Six-Core Processor 
+	OptiFine Version: OptiFine_1.12.2_HD_U_C6
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 446.14
+	OpenGlRenderer: GeForce GTX 1660 Ti/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12

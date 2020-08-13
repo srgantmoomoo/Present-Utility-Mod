@@ -25,7 +25,7 @@ public class UIRenderer extends Gui {
 			if(Minecraft.getMinecraft().fontRendererObj.getStringWidth(arg0.name) > Minecraft.getMinecraft().fontRendererObj.getStringWidth(arg1.name)) {
 				return 1;
 			}
-			return 0;
+			return 1;
 		}
 		
 	}
@@ -44,7 +44,7 @@ public class UIRenderer extends Gui {
 				continue;
 			
 			double offset1 = count*(fr.FONT_HEIGHT + 1);
-			double offset2 = count*(fr.FONT_HEIGHT +2);
+			double offset2 = count*(fr.FONT_HEIGHT + 1);
 			
 			Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(module.name) - 5, offset1, sr.getScaledWidth() - fr.getStringWidth(module.name) -3, 1 + fr.FONT_HEIGHT + offset2, -0x8B0000);
 			Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(module.name) - 3, offset1, sr.getScaledWidth(), 1 + fr.FONT_HEIGHT + offset2, 0x90000000);

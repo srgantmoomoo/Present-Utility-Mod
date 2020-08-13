@@ -54,11 +54,12 @@ public class Present {
 		
 	}
 	
-	public List<Module> getModulesByCategory(Category c) {
+	public static List<Module> getModulesByCategory(Category c) {
 		List<Module> modules = new ArrayList<Module>();
 		
-		for(Module m : this.modules ) {
-			if(m.category == c)modules.add(m);
+		for(Module m : Present.modules ) {
+			if(m.category == c)
+				modules.add(m);
 		}
 		
 		return modules;
