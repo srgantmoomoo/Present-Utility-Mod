@@ -9,10 +9,8 @@
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 <fullyQualifiedTypeName name="me.present.ui.UIRenderer"/>
 <fullyQualifiedTypeName name="me.present.movement.Sneak"/>
-<fullyQualifiedTypeName name="me.present.modules.Module"/>
 <fullyQualifiedTypeName name="me.present.events.Event"/>
 <fullyQualifiedTypeName name="me.present.listeners.EventUpdate"/>
-<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
 <fullyQualifiedTypeName name="me.present.movement.Fly"/>
 <fullyQualifiedTypeName name="me.present.render.FullBright"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -25,9 +23,18 @@
 <fullyQualifiedTypeName name="me.present.modules.Module.Category"/>
 <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
 <fullyQualifiedTypeName name="me.present.ui.MainMenu"/>
-<fullyQualifiedTypeName name="me.present.Present"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiWorldSelection"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiOptions"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiLanguage"/>
+<fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordEventHandlers.Builder"/>
+<fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordEventHandlers"/>
+<fullyQualifiedTypeName name="net.arikia.dev.drpc.callbacks.ReadyCallback"/>
+<fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence.Builder"/>
+<fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence"/>
+<fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRPC"/>
+<fullyQualifiedTypeName name="me.present.modules.Module"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+<fullyQualifiedTypeName name="me.present.player.DiscordRPC"/>
+<fullyQualifiedTypeName name="me.present.Present"/>
 </qualifiedTypeNameHistroy>

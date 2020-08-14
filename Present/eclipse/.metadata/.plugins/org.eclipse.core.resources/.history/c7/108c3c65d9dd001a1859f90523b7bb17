@@ -1,0 +1,57 @@
+package me.present.player;
+
+import net.arikia.dev.drpc.DiscordEventHandlers;
+import net.arikia.dev.drpc.DiscordRPC;
+import net.arikia.dev.drpc.DiscordUser;
+import net.arikia.dev.drpc.callbacks.ReadyCallback;
+
+public class DiscordRPC {
+	
+	private boolean running = true;
+	public long created = 0;
+	
+	public void start() {
+		
+		this.created = System.currentTimeMillis();
+		
+		DiscordEventHandlers handlers = new DiscordEventHandlers.Builder().setReadyEventHandler(new ReadyCallback() {
+			
+			@Override
+			public void apply(DiscordUser user) {
+				System.out.println("Welcome" + user.username + "#" + user.discriminator + ".");
+				update("Booting up...", "");
+			}
+			
+		}).build();
+		
+		DiscordRPC.discordInitialize("743637292236668948", handlers, true);
+		
+		new Thread("Discord RPC Callback") {
+			
+			@Override
+			public void run() {;
+			
+				while(running) {
+					net.arikia.dev.drpc.DiscordRPC.discordRunCallbacks();
+				}
+			}
+			
+		}.start();
+
+	}
+	
+	private static void discordInitialize(String string, DiscordEventHandlers handlers, boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void shutdown() {
+		running = false;
+		DiscordRPC.
+	}
+	
+	public void update(String firstLine, String secondLine) {
+		
+	}
+
+}

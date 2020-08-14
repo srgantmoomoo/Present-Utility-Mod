@@ -1,0 +1,65 @@
+package me.present.player;
+
+import org.lwjgl.input.Keyboard;
+
+import me.present.modules.Module;
+import net.arikia.dev.drpc.DiscordEventHandlers;
+import net.arikia.dev.drpc.DiscordRichPresence;
+import net.arikia.dev.drpc.DiscordUser;
+import net.arikia.dev.drpc.callbacks.ReadyCallback;
+
+public class DiscordRPC extends Module {
+	
+	public DiscordRPC() {
+		super("DiscordRPC", Keyboard.KEY_NONE, Category.PLAYER);
+	}
+
+	private boolean running = true;
+	public long created = 0;
+	
+	public void onEnable() {
+		
+		this.created = System.currentTimeMillis();
+		
+		DiscordEventHandlers handlers = new DiscordEventHandlers.Builder().setReadyEventHandler(new ReadyCallback() {
+			
+			@Override
+			public void apply(DiscordUser user) {
+				System.out.println("Welcome" + user.username + "#" + user.discriminator + ".");
+				update("present on top!!", "");
+			}
+			
+		}).build();
+		
+		net.arikia.dev.drpc.DiscordRPC.discordInitialize("743637292236668948", handlers, true);
+		
+		new Thread("Discord RPC Callback") {
+			
+			@Override
+			public void run() {;
+			
+				while(running) {
+					net.arikia.dev.drpc.DiscordRPC.discordRunCallbacks();
+				}
+			}
+			
+		}.start();
+
+	}
+	
+	public void onDisable() {
+		running = false;
+
+		net.arikia.dev.drpc.DiscordRPC.discordShutdown();
+	}
+	
+	public void update(String firstLine, String secondLine) {
+		DiscordRichPresence.Builder b = new DiscordRichPresence.Builder(secondLine);
+		b.setBigImage("large", "");
+		b.setDetails(firstLine);
+		b.setStartTimestamps(created);
+		
+		net.arikia.dev.drpc.DiscordRPC.discordUpdatePresence(b.build());
+	}
+
+}

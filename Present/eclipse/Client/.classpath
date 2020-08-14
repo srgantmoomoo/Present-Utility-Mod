@@ -38,6 +38,7 @@
 	<classpathentry kind="lib" path="jars/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar"/>
 	<classpathentry kind="lib" path="jars/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar"/>
 	<classpathentry kind="lib" path="jars/libraries/com/mojang/text2speech/1.10.3/text2speech-1.10.3.jar"/>
-	<classpathentry kind="lib" sourcepath="jars/libraries/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar" path="jars/libraries/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar"/>
+	<classpathentry kind="lib" path="jars/libraries/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar" sourcepath="jars/libraries/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/24sag/Documents/Present-Utility-Mod/Present/lib/discord-rpc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
