@@ -13,7 +13,10 @@ import me.present.modules.Module.Category;
 import me.present.movement.Fly;
 import me.present.movement.Sneak;
 import me.present.movement.Sprint;
+import me.present.player.DiscordRPC;
+import me.present.render.ClickGUI;
 import me.present.render.FullBright;
+import me.present.render.GuiTakeUp;
 import me.present.render.TabGUI;
 import me.present.ui.UIRenderer;
 
@@ -32,6 +35,9 @@ public class Present {
 		modules.add(new Fly());
 		modules.add(new FullBright());
 		modules.add(new TabGUI());
+		modules.add(new ClickGUI());
+		modules.add(new DiscordRPC());
+		modules.add(new GuiTakeUp());
 	}
 	
 	public static void onEvent(Event e) {

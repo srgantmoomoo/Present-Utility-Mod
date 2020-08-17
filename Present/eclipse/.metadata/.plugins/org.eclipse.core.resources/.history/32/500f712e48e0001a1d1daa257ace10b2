@@ -1,0 +1,69 @@
+package me.present.ui;
+
+import java.io.IOException;
+
+import me.present.Present;
+import me.present.modules.Module;
+import me.present.modules.Module.Category;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiScreen;
+
+public class ClickGui extends GuiScreen {
+	
+	@Override
+	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+		drawDefaultBackground();
+		drawRect(150, 2, 220, 14, 0x80000000);
+		mc.fontRendererObj.drawString("CombatHacks", 152, 4, 0xffffffff);
+		drawRect(250, 2, 322, 14, 0x80000000);
+		mc.fontRendererObj.drawString("MovementHacks", 252, 4, 0xffffffff);
+		drawRect(350, 2, 432, 14, 0x80000000);
+		mc.fontRendererObj.drawString("RenderHacks", 352, 4, 0xffffffff);
+		drawRect(450, 2, 506, 14, 0x80000000);
+		mc.fontRendererObj.drawString("PlayerHacks", 452, 4, 0xffffffff);
+		super.drawScreen(mouseX, mouseY, partialTicks);
+	}
+	
+	@Override
+	public boolean doesGuiPauseGame() {
+		return false;
+	}
+	
+	public int placeForHackY(Module m) {
+		
+		if(m.category.equals(Category.COMBAT)) return Category.placeInListCombat(m) * 14;
+		if(m.category.equals(Category.MOVEMENT)) return Category.placeInListMovement(m) * 14;
+		if(m.category.equals(Category.RENDER)) return Category.placeInListRender(m) * 14;
+		if(m.category.equals(Category.PLAYER)) return Category.placeInListPlayer(m) * 14;
+		
+		return 0;
+	}
+	
+	public int placeForHackX(Module m) {
+		
+		if(m.category.equals(Category.COMBAT)) return 150;
+		if(m.category.equals(Category.MOVEMENT)) return 250;
+		if(m.category.equals(Category.RENDER)) return 350;
+		if(m.category.equals(Category.PLAYER)) return 450;
+		
+		return 0;
+	}
+	
+	@Override
+	public void initGui() {
+		for(int i = 1; i < Present.modules.size(); i++) {
+			Module m = Present.modules.get(i);
+			buttonList.add(new GuiButton(i, placeForHackX(m), placeForHackY(m), 25 + (m.name.length() * 3) + m.name.length(), 14, m.name));
+		}
+	}
+	
+	@Override
+	protected void actionPerformed(GuiButton button) throws IOException {
+		for(int i = 1; i < Present.modules.size(); i++) {
+			if(button.id == i) {
+				Present.modules.get(i).toggle();
+			}
+		}
+	}
+	
+}

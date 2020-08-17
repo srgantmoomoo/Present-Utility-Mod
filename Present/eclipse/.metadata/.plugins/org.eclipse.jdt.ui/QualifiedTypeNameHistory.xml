@@ -25,9 +25,13 @@
 <fullyQualifiedTypeName name="me.present.modules.Module.Category"/>
 <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
 <fullyQualifiedTypeName name="me.present.ui.MainMenu"/>
-<fullyQualifiedTypeName name="me.present.Present"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiWorldSelection"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiOptions"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiLanguage"/>
+<fullyQualifiedTypeName name="me.present.Present"/>
+<fullyQualifiedTypeName name="me.present.render.ClickGUI"/>
+<fullyQualifiedTypeName name="me.present.player.GuiTakeUp"/>
+<fullyQualifiedTypeName name="me.present.player.DiscordRPC"/>
+<fullyQualifiedTypeName name="me.present.render.GuiTakeUp"/>
 </qualifiedTypeNameHistroy>

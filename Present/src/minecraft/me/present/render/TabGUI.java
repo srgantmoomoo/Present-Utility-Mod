@@ -27,8 +27,8 @@ public class TabGUI extends Module {
 		if(e instanceof EventRenderGUI) {
 			FontRenderer fr = mc.fontRendererObj;
 		
-			Gui.drawRect(2, 11, 53, 71, 0x98700000);
-			Gui.drawRect(3, 14 + currentTab * 15 - 1, 52, 14 + currentTab * 15 + 11, -0x8B0000);
+			Gui.drawRect(2, 12, 53, 71, 0x80000000);
+			Gui.drawRect(3, 14 + currentTab * 15 - 1, 52, 14 + currentTab * 15 + 11, 0x9993d3d3);
 			
 			int count = 0;
 			for(Category c : Module.Category.values()) {
@@ -44,9 +44,9 @@ public class TabGUI extends Module {
 				
 				if (modules.size() == 0)
 					return;
-				
-				Gui.drawRect(53, 11, 53 + 53, 11 + modules.size() * 15, 0x98700000);
-				Gui.drawRect(54, 14 + category.moduleIndex * 15 - 1, 52 + 53, 14 + category.moduleIndex * 15 + 11, -0x8B0000);
+
+				Gui.drawRect(54.5, 12, 130, 11 + modules.size() * 15, 0x80000000);
+				Gui.drawRect(55.5, 14 + category.moduleIndex * 15 - 1, 129, 14 + category.moduleIndex * 15 + 11, 0x9993d3d3);
 				
 				count = 0;
 				for(Module m : modules) {
