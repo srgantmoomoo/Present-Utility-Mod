@@ -8,6 +8,6 @@ import me.present.modules.Module.Category;
 public class GuiTakeUp extends Module {
 	
 	public GuiTakeUp() {
-		super("GuiPlaceHolder", Keyboard.KEY_NONE, Category.RENDER);
+		super("GuiPlaceHold", Keyboard.KEY_NONE, Category.RENDER);
 	}
 }

@@ -1,0 +1,5 @@
+package me.present.settings;
+
+public class NumberSetting extends Setting {
+
+}

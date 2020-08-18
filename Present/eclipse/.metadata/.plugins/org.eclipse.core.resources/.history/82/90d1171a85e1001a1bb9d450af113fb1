@@ -1,0 +1,21 @@
+package me.present.ui;
+
+import java.awt.Color;
+import java.util.Collections;
+import java.util.Comparator;
+
+import me.present.Present;
+import me.present.listeners.EventRenderGUI;
+import me.present.modules.Module;
+import me.present.settings.BooleanSetting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.ScaledResolution;
+
+public class UIRenderer extends Gui {
+	
+	public BooleanSetting Rainbow = new BooleanSetting("Rainbow", true);
+	
+	
+}

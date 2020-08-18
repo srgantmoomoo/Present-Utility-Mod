@@ -1,5 +1,6 @@
 package me.present.ui;
 
+import java.awt.Color;
 import java.io.IOException;
 
 import me.present.Present;
@@ -12,15 +13,25 @@ public class ClickGui extends GuiScreen {
 	
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+		
+		float hue = (System.currentTimeMillis() % 2000) / 2000f;
+		int color = Color.HSBtoRGB(hue, 1, 1);
+				
+		int primaryColor = color;
+		
 		drawDefaultBackground();
-		drawRect(135, 2, 220, 14, 0x80000000);
-		mc.fontRendererObj.drawString("Combat", 161, 4, 0xffffffff);
-		drawRect(235, 2, 320, 14, 0x80000000);
-		mc.fontRendererObj.drawString("Movement", 255, 4, 0xffffffff);
-		drawRect(335, 2, 420, 14, 0x80000000);
-		mc.fontRendererObj.drawString("Render", 359, 4, 0xffffffff);
-		drawRect(435, 2, 520, 14, 0x80000000);
-		mc.fontRendererObj.drawString("Player", 460, 4, 0xffffffff);
+		drawRect(130, 2, 215, 14, 0x80000000); //0x30ffffff
+		drawRect(130, 2, 215, 14, 0x80000000);
+		mc.fontRendererObj.drawStringWithShadow("Combat", 156, 4, 0xffffffff); //0xffffffff
+		drawRect(230, 2, 315, 14, 0x80000000);
+		drawRect(230, 2, 315, 14, 0x80000000);
+		mc.fontRendererObj.drawStringWithShadow("Movement", 250, 4, 0xffffffff);
+		drawRect(330, 2, 415, 14, 0x80000000);
+		drawRect(330, 2, 415, 14, 0x80000000);
+		mc.fontRendererObj.drawStringWithShadow("Render", 354, 4, 0xffffffff);
+		drawRect(430, 2, 515, 14, 0x80000000);
+		drawRect(430, 2, 515, 14, 0x80000000);
+		mc.fontRendererObj.drawStringWithShadow("Player", 455, 4, 0xffffffff);
 		super.drawScreen(mouseX, mouseY, partialTicks);
 	}
 	
@@ -33,7 +44,7 @@ public class ClickGui extends GuiScreen {
 		
 		if(m.category.equals(Category.COMBAT)) return Category.placeInListCombat(m) * 14;
 		if(m.category.equals(Category.MOVEMENT)) return Category.placeInListMovement(m) * 14;
-		if(m.category.equals(Category.RENDER)) return Category.placeInListRender(m) * 14 - 14;
+		if(m.category.equals(Category.RENDER)) return Category.placeInListRender(m) * 14;
 		if(m.category.equals(Category.PLAYER)) return Category.placeInListPlayer(m) * 14;
 		
 		return 0;
@@ -41,10 +52,10 @@ public class ClickGui extends GuiScreen {
 	
 	public int placeForHackX(Module m) {
 		
-		if(m.category.equals(Category.COMBAT)) return 135;
-		if(m.category.equals(Category.MOVEMENT)) return 235;
-		if(m.category.equals(Category.RENDER)) return 335;
-		if(m.category.equals(Category.PLAYER)) return 435;
+		if(m.category.equals(Category.COMBAT)) return 130;
+		if(m.category.equals(Category.MOVEMENT)) return 230;
+		if(m.category.equals(Category.RENDER)) return 330;
+		if(m.category.equals(Category.PLAYER)) return 430;
 		
 		return 0;
 	}

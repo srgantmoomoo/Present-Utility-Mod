@@ -46,7 +46,7 @@ public class MainMenu extends GuiScreen {
 		GlStateManager.translate(width/2f, height/2f - 60, 0);
 		GlStateManager.scale(3, 3, 1);
 		GlStateManager.translate(-(width/2f), -(height/2f), 0);
-		this.drawCenteredString(mc.fontRendererObj, Present.clientName, width/2f, height/2f - mc.fontRendererObj.FONT_HEIGHT/2f, -1);
+		this.drawCenteredString(mc.fontRendererObj, Present.clientName, width/2f, height/2f - mc.fontRendererObj.FONT_HEIGHT/2f, 0x9993d3d3);
 		GlStateManager.popMatrix();
 	}
 	

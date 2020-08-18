@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="me.present.modules.Module"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="me.present.settings.Setting"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="me.present.settings.ModeSetting"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.vecmath.Color4b"/>
+<fullyQualifiedTypeName name="me.present.settings.BooleanSetting"/>
+<fullyQualifiedTypeName name="me.present.ui.ClickGuiRainbow"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButtonRainbow"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.FontRenderer"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
 </qualifiedTypeNameHistroy>

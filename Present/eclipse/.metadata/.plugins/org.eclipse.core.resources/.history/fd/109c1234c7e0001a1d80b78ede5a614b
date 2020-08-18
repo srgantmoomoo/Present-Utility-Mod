@@ -1,0 +1,46 @@
+package me.present.settings;
+
+public class NumberSetting extends Setting {
+	
+	public double value, minimun, maximum, increment;
+
+	public NumberSetting(double value, double minimun, double maximum, double increment) {
+		this.value = value;
+		this.minimun = minimun;
+		this.maximum = maximum;
+		this.increment = increment;
+	}
+
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = Math.max(minimun, Math.min(maximum, value));
+	}
+
+	public double getMinimun() {
+		return minimun;
+	}
+
+	public void setMinimun(double minimun) {
+		this.minimun = minimun;
+	}
+
+	public double getMaximum() {
+		return maximum;
+	}
+
+	public void setMaximum(double nmaximum) {
+		this.maximum = maximum;
+	}
+
+	public double getIncrement() {
+		return increment;
+	}
+
+	public void setIncrement(double increment) {
+		this.increment = increment;
+	}
+
+}

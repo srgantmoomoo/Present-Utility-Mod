@@ -1,0 +1,96 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 8/17/20 9:12 PM
+Description: Unexpected error
+
+java.lang.ClassCastException: net.minecraft.client.gui.GuiButtonRainbow cannot be cast to java.util.Collection
+	at me.present.ui.ClickGuiRainbow.initGui(ClickGuiRainbow.java:65)
+	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:521)
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1093)
+	at me.present.render.ClickGUI.onEnable(ClickGUI.java:26)
+	at me.present.modules.Module.toggle(Module.java:47)
+	at me.present.Present.keyPress(Present.java:57)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2068)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1917)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1183)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:476)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at me.present.ui.ClickGuiRainbow.initGui(ClickGuiRainbow.java:65)
+	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:521)
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1093)
+	at me.present.render.ClickGUI.onEnable(ClickGUI.java:26)
+	at me.present.modules.Module.toggle(Module.java:47)
+	at me.present.Present.keyPress(Present.java:57)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2068)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player575'/92, l='MpServer', x=450.73, y=93.00, z=443.67]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 310520 game time, 141685 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 29 total; [EntityRabbit['Rabbit'/128, l='MpServer', x=406.50, y=79.00, z=445.95], EntityRabbit['Rabbit'/129, l='MpServer', x=408.79, y=80.00, z=443.49], EntityRabbit['Rabbit'/130, l='MpServer', x=421.45, y=77.21, z=444.35], EntityRabbit['Rabbit'/131, l='MpServer', x=431.49, y=84.00, z=470.40], EntityRabbit['Rabbit'/133, l='MpServer', x=447.51, y=85.00, z=475.79], EntityItem['item.item.dyePowder.black'/137, l='MpServer', x=456.61, y=46.00, z=448.88], EntityRabbit['Rabbit'/138, l='MpServer', x=452.33, y=85.00, z=475.79], EntityRabbit['Rabbit'/143, l='MpServer', x=475.49, y=67.00, z=411.82], EntityItem['item.item.dyePowder.black'/146, l='MpServer', x=493.81, y=48.00, z=389.37], EntitySquid['Squid'/147, l='MpServer', x=495.02, y=48.00, z=389.49], EntitySquid['Squid'/148, l='MpServer', x=491.42, y=49.00, z=387.06], EntityRabbit['Rabbit'/149, l='MpServer', x=487.52, y=67.00, z=409.50], EntityRabbit['Rabbit'/150, l='MpServer', x=488.44, y=67.00, z=420.51], EntitySquid['Squid'/151, l='MpServer', x=498.50, y=46.00, z=387.50], EntityItem['item.item.dyePowder.black'/152, l='MpServer', x=499.36, y=46.00, z=389.80], EntityRabbit['Rabbit'/153, l='MpServer', x=498.00, y=67.00, z=456.81], EntityRabbit['Rabbit'/154, l='MpServer', x=512.26, y=69.00, z=371.39], EntityRabbit['Rabbit'/155, l='MpServer', x=527.58, y=71.00, z=406.51], EntityRabbit['Rabbit'/156, l='MpServer', x=519.53, y=72.00, z=404.17], EntityRabbit['Rabbit'/157, l='MpServer', x=518.47, y=71.00, z=465.74], EntityRabbit['Rabbit'/158, l='MpServer', x=523.51, y=74.00, z=469.43], EntityRabbit['Rabbit'/159, l='MpServer', x=520.29, y=69.00, z=479.43], EntityRabbit['Rabbit'/160, l='MpServer', x=518.36, y=65.00, z=506.42], EntityRabbit['Rabbit'/161, l='MpServer', x=526.69, y=66.00, z=497.54], EntityRabbit['Rabbit'/162, l='MpServer', x=529.85, y=71.00, z=399.63], EntityPlayerSP['Player575'/92, l='MpServer', x=450.73, y=93.00, z=443.67], EntityMinecartChest['Minecart with Chest'/122, l='MpServer', x=385.50, y=42.06, z=374.50], EntityMinecartChest['Minecart with Chest'/126, l='MpServer', x=404.50, y=35.06, z=380.50], EntityMinecartChest['Minecart with Chest'/127, l='MpServer', x=400.50, y=38.06, z=437.50]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:520)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2995)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:505)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_261, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 662537672 bytes (631 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 7, tcache: 10, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1660 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 446.14, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 2600X Six-Core Processor 
+	OptiFine Version: OptiFine_1.12.2_HD_U_C6
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 446.14
+	OpenGlRenderer: GeForce GTX 1660 Ti/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12
