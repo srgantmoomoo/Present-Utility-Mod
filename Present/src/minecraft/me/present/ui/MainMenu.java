@@ -30,7 +30,6 @@ public class MainMenu extends GuiScreen {
 		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
 		
 		this.drawGradientRect(0, height-150, width, height, 0x00000000, 0x8b000000);
-		this.drawRect(sr.getScaledWidth() - 270, 288, 270, 141, 0x8b000000);
 		
 		String[] buttons = { "no freinds mode", "freinds mode", "thingys mode", "words mode", "nothing mode" };
 		
@@ -49,7 +48,7 @@ public class MainMenu extends GuiScreen {
 		GlStateManager.translate(width/2f, height/2f - 60, 0);
 		GlStateManager.scale(3, 3, 1);
 		GlStateManager.translate(-(width/2f), -(height/2f), 0);
-		this.drawCenteredString(mc.fontRendererObj, Present.clientName, width/2f, height/2f - mc.fontRendererObj.FONT_HEIGHT/2f, 0x9987C0E1);
+		this.drawCenteredString(mc.fontRendererObj, Present.clientName, width/2f, height/2f - mc.fontRendererObj.FONT_HEIGHT/2f, 0xff87C0E1);
 		GlStateManager.popMatrix();
 	}
 	

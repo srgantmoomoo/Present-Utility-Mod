@@ -88,6 +88,7 @@ public class GuiButton extends Gui {
 					
 			int primaryColor = color;
         	
+			
             FontRenderer fontrenderer = p_191745_1_.fontRendererObj;
             p_191745_1_.getTextureManager().bindTexture(BUTTON_TEXTURES);
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
@@ -100,7 +101,11 @@ public class GuiButton extends Gui {
             if(Rainbow.isEnabled()) {
             drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, color); //0x30ffffff
             }else {
-            	 drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 0x80000000);
+            	if(this.hovered) {
+            	 drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 0xff87C0E1);
+            	}else {
+            		 drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 0x80000000);
+            	}
             }
             
             int j = 14737632;
@@ -114,7 +119,7 @@ public class GuiButton extends Gui {
             	if(Rainbow.isEnabled()) {
                 j = 0xc0c0c0;  //0x93d3d3
             	}else {
-            		j = 0xff87C0E1;
+            		j = -1;
             	}
             }
 

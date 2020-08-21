@@ -1,4 +1,4 @@
-#Thu Aug 20 23:37:25 EDT 2020
+#Fri Aug 21 00:40:08 EDT 2020
 shaderPack=OFF
 antialiasingLevel=0
 normalMapEnabled=true

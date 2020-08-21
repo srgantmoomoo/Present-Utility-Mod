@@ -11,11 +11,11 @@
 <fullyQualifiedTypeName name="me.present.ui.ClickGuiRainbow"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButtonRainbow"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.FontRenderer"/>
-<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
 <fullyQualifiedTypeName name="me.present.ui.UIRendererRainbow"/>
 <fullyQualifiedTypeName name="me.present.ui.UIRenderer"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
 <fullyQualifiedTypeName name="me.present.modules.Module"/>
 <fullyQualifiedTypeName name="me.present.Present"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
 </qualifiedTypeNameHistroy>
