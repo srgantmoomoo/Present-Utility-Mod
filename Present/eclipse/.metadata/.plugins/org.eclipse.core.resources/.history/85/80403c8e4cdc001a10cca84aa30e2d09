@@ -1,5 +1,0 @@
-package me.present.events;
-
-public enum EventType {
-
-}

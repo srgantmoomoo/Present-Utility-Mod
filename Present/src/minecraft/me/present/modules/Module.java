@@ -59,6 +59,7 @@ public class Module {
 	}
 	
 	public enum Category {
+		SHADERS("Shaders"),
 		COMBAT("Combat"),
 		MOVEMENT("Movement"),
 		RENDER("Render"),
@@ -72,7 +73,7 @@ public class Module {
 			
 		}
 		
-public static int size(Category cat) {
+		public static int size(Category cat) {
 			
 			int i = 0;
 			

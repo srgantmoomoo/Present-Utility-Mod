@@ -5,6 +5,36 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/wooden_sword": {
+    "criteria": {
+      "has_stick": "2020-08-19 22:48:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_pickaxe": {
+    "criteria": {
+      "has_stick": "2020-08-19 22:48:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_hoe": {
+    "criteria": {
+      "has_stick": "2020-08-19 22:48:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_axe": {
+    "criteria": {
+      "has_stick": "2020-08-19 22:48:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ladder": {
+    "criteria": {
+      "has_stick": "2020-08-19 22:48:22 -0400"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/paper": {
     "criteria": {
       "has_reeds": "2020-08-17 01:33:51 -0400"
@@ -19,8 +49,15 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "beaches": "2020-08-17 01:33:53 -0400"
+      "beaches": "2020-08-17 01:33:53 -0400",
+      "desert": "2020-08-19 22:48:23 -0400"
     },
     "done": false
+  },
+  "minecraft:recipes/tools/wooden_shovel": {
+    "criteria": {
+      "has_stick": "2020-08-19 22:48:22 -0400"
+    },
+    "done": true
   }
 }

@@ -1,0 +1,12 @@
+package me.present.ui;
+
+public class Snippet {
+	public static void main(String[] args) {
+		if(Rainbow.isEnabled()) {
+					mc.displayGuiScreen(new UiRendererRainbow);;
+					toggle();
+					{else {
+						mc.displayGuiScreen(new UiRenderer);
+	}
+}
+

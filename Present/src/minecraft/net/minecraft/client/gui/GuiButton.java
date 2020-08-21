@@ -114,7 +114,7 @@ public class GuiButton extends Gui {
             	if(Rainbow.isEnabled()) {
                 j = 0xc0c0c0;  //0x93d3d3
             	}else {
-            		j = 0x93d3d3;
+            		j = 0xff87C0E1;
             	}
             }
 

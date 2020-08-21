@@ -11,11 +11,12 @@ import me.present.settings.BooleanSetting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 
-public class UIRenderer extends Gui {
+public class UIRenderer extends GuiScreen {
 	
-	public BooleanSetting Rainbow = new BooleanSetting("Rainbow", true);
+	public BooleanSetting Rainbow = new BooleanSetting("Rainbow", false);
 	
 	private Minecraft mc = Minecraft.getMinecraft();
 	
@@ -46,7 +47,7 @@ public class UIRenderer extends Gui {
 		
 		Collections.sort(Present.modules, new ModuleComparator());
 		
-		fr.drawStringWithShadow(Present.clientName + " " + Present.clientVersion, 1, 2, color); //0xffffff
+		fr.drawStringWithShadow(Present.clientName + " " + Present.clientVersion, 1, 2, 0xffffff); //0xffffff
 		
 		int count = 0;
 		for(Module module : Present.modules) {
@@ -61,7 +62,7 @@ public class UIRenderer extends Gui {
 			Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(module.name) - 3, offset1, sr.getScaledWidth(), 1 + fr.FONT_HEIGHT + offset2, 0x90000000);
 			fr.drawStringWithShadow(module.name, sr.getScaledWidth() - fr.getStringWidth(module.name) - 1, 1 + offset2, color);
 			}else {
-				Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(module.name) - 5, offset1, sr.getScaledWidth() - fr.getStringWidth(module.name) -3, 1 + fr.FONT_HEIGHT + offset2, 0x9993d3d3);
+				Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(module.name) - 5, offset1, sr.getScaledWidth() - fr.getStringWidth(module.name) -3, 1 + fr.FONT_HEIGHT + offset2, 0xff87C0E1); 
 				Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(module.name) - 3, offset1, sr.getScaledWidth(), 1 + fr.FONT_HEIGHT + offset2, 0x90000000);
 				fr.drawStringWithShadow(module.name, sr.getScaledWidth() - fr.getStringWidth(module.name) - 1, 1 + offset2, 0xffffff);
 			}
