@@ -6,6 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.lwjgl.opengl.Display;
 
+import me.present.combat.KillAura;
 import me.present.events.Event;
 import me.present.listeners.EventKey;
 import me.present.modules.Module;
@@ -38,6 +39,7 @@ public class Present {
 		modules.add(new ClickGUI());
 		modules.add(new DiscordRPC());
 		modules.add(new GuiTakeUp());
+		modules.add(new KillAura());
 	}
 	
 	public static void onEvent(Event e) {

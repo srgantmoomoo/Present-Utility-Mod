@@ -1,5 +1,0 @@
-package me.present.settings;
-
-public class ModeSetting extends Setting {
-
-}

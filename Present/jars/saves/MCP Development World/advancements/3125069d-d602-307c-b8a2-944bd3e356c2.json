@@ -25,6 +25,7 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "beaches": "2020-08-27 19:01:10 -0400",
       "desert_hills": "2020-08-17 16:48:30 -0400",
       "desert": "2020-08-17 16:51:46 -0400"
     },

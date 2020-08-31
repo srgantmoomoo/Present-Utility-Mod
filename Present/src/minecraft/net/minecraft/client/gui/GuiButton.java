@@ -1,7 +1,11 @@
 package net.minecraft.client.gui;
 
 import java.awt.Color;
+import java.util.List;
 
+import me.present.Present;
+import me.present.modules.Module;
+import me.present.modules.Module.Category;
 import me.present.settings.BooleanSetting;
 import me.present.ui.ClickGuiRainbow;
 import net.minecraft.client.Minecraft;
@@ -15,6 +19,8 @@ public class GuiButton extends Gui {
 	public BooleanSetting Rainbow = new BooleanSetting("Rainbow", false);
 	
     protected static final ResourceLocation BUTTON_TEXTURES = new ResourceLocation("textures/gui/widgets.png");
+    
+    public int currentTab;
 
     /** Button width in pixels */
     protected int width;
@@ -82,13 +88,14 @@ public class GuiButton extends Gui {
     {
         if (this.visible)
         {
-        	
+        	Category category = Module.Category.values()[currentTab];
+			List<Module> modules = Present.getModulesByCategory(category);
         	float hue = (System.currentTimeMillis() % 2000) / 2000f;
 			int color = Color.HSBtoRGB(hue, 1, 1);
 					
 			int primaryColor = color;
         	
-			
+			for(Module m : modules) {
             FontRenderer fontrenderer = p_191745_1_.fontRendererObj;
             p_191745_1_.getTextureManager().bindTexture(BUTTON_TEXTURES);
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
@@ -102,9 +109,10 @@ public class GuiButton extends Gui {
             drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, color); //0x30ffffff
             }else {
             	if(this.hovered) {
-            	 drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 0xff87C0E1);
-            	}else {
-            		 drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 0x80000000);
+            		drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 0xff87C0E1);
+            			}else {
+            				drawRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 0x80000000);
+            	
             	}
             }
             
@@ -124,9 +132,9 @@ public class GuiButton extends Gui {
             }
 
             this.drawCenteredString(fontrenderer, this.displayString, this.xPosition + this.width / 2, this.yPosition + (this.height - 8) / 2, j);
+			}
         }
     }
-
     /**
      * Fired when the mouse button is dragged. Equivalent of MouseListener.mouseDragged(MouseEvent e).
      */

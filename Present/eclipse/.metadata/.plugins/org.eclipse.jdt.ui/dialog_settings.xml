@@ -70,11 +70,11 @@
 	<section name="JavaSearchPage">
 		<item key="CASE_SENSITIVE" value="false"/>
 		<item key="INCLUDE_MASK" value="15"/>
-		<item key="HISTORY_SIZE" value="11"/>
+		<item key="HISTORY_SIZE" value="12"/>
 		<section name="HISTORY0">
-			<item key="searchFor" value="4"/>
+			<item key="searchFor" value="2"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="GetModulesByCategory"/>
+			<item key="pattern" value="getname"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -84,9 +84,9 @@
 			</list>
 		</section>
 		<section name="HISTORY1">
-			<item key="searchFor" value="4"/>
+			<item key="searchFor" value="2"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="getmodulesbycategory"/>
+			<item key="pattern" value="unicode"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -96,9 +96,9 @@
 			</list>
 		</section>
 		<section name="HISTORY2">
-			<item key="searchFor" value="4"/>
+			<item key="searchFor" value="2"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="uirenderer"/>
+			<item key="pattern" value="loadlanguagelist"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -110,7 +110,7 @@
 		<section name="HISTORY3">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="startup"/>
+			<item key="pattern" value="this.isUnicode = false;"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -122,7 +122,7 @@
 		<section name="HISTORY4">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="moduleIndex"/>
+			<item key="pattern" value="toggled"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -132,9 +132,9 @@
 			</list>
 		</section>
 		<section name="HISTORY5">
-			<item key="searchFor" value="1"/>
+			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="mc.shutdown"/>
+			<item key="pattern" value="isToggled"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -144,9 +144,9 @@
 			</list>
 		</section>
 		<section name="HISTORY6">
-			<item key="searchFor" value="0"/>
+			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="displayGuiScreen"/>
+			<item key="pattern" value="moduleList"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -156,9 +156,9 @@
 			</list>
 		</section>
 		<section name="HISTORY7">
-			<item key="searchFor" value="0"/>
+			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="GuiMultiplayer"/>
+			<item key="pattern" value="GetModulesByCategory"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -168,9 +168,9 @@
 			</list>
 		</section>
 		<section name="HISTORY8">
-			<item key="searchFor" value="0"/>
+			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="GuiMultiplyer"/>
+			<item key="pattern" value="getmodulesbycategory"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -180,9 +180,9 @@
 			</list>
 		</section>
 		<section name="HISTORY9">
-			<item key="searchFor" value="0"/>
+			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="Multiplayer"/>
+			<item key="pattern" value="uirenderer"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -192,14 +192,26 @@
 			</list>
 		</section>
 		<section name="HISTORY10">
-			<item key="searchFor" value="0"/>
+			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="GuiMainMenu"/>
+			<item key="pattern" value="startup"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
 			<item key="isCaseSensitive" value="false"/>
-			<item key="includeMask" value="11"/>
+			<item key="includeMask" value="15"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY11">
+			<item key="searchFor" value="4"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="moduleIndex"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value=""/>
+			<item key="isCaseSensitive" value="false"/>
+			<item key="includeMask" value="15"/>
 			<list key="workingSets">
 			</list>
 		</section>

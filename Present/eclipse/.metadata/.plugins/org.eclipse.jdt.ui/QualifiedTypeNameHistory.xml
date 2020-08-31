@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="me.present.settings.Setting"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="me.present.settings.ModeSetting"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
@@ -14,8 +12,17 @@
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
 <fullyQualifiedTypeName name="me.present.ui.UIRendererRainbow"/>
 <fullyQualifiedTypeName name="me.present.ui.UIRenderer"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="me.present.shaders.Sildurs"/>
+<fullyQualifiedTypeName name="me.present.ui.UIRenderer.ModuleComparator"/>
+<fullyQualifiedTypeName name="me.present.combat.KillAura"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
 <fullyQualifiedTypeName name="me.present.modules.Module"/>
+<fullyQualifiedTypeName name="me.present.modules.Module.Category"/>
 <fullyQualifiedTypeName name="me.present.Present"/>
-<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="com.mojang.realmsclient.dto.PlayerInfo"/>
 </qualifiedTypeNameHistroy>

@@ -26,7 +26,7 @@ public class MainMenu extends GuiScreen {
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 		
 		ScaledResolution sr = new ScaledResolution(mc);
-		mc.getTextureManager().bindTexture(new ResourceLocation("present/background.jpg"));
+		mc.getTextureManager().bindTexture(new ResourceLocation("present/backgroundagain.jpg"));
 		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
 		
 		this.drawGradientRect(0, height-150, width, height, 0x00000000, 0x8b000000);

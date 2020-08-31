@@ -64,6 +64,7 @@ public class ClickGui extends GuiScreen {
 	public void initGui() {
 		for(int i = 1; i < Present.modules.size(); i++) {
 			Module m = Present.modules.get(i);
+			if(!m.name.equals("Sildurs"))
 			buttonList.add(new GuiButton(i, placeForHackX(m), placeForHackY(m), 85, 14, m.name));
 		}
 	}

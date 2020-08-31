@@ -6,6 +6,7 @@ import java.util.List;
 import org.lwjgl.input.Keyboard;
 
 import me.present.Present;
+import me.present.combat.KillAura;
 import me.present.events.Event;
 import me.present.listeners.EventKey;
 import me.present.listeners.EventRenderGUI;
@@ -14,7 +15,7 @@ import me.present.modules.Module;
 import me.present.settings.BooleanSetting;
 import me.present.ui.ClickGuiRainbow;
 import me.present.ui.UIRenderer;
-import me.present.ui.UIRendererRainbow;
+import me.present.ui.UIRenderer.ModuleComparator;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
 
@@ -24,7 +25,7 @@ public class TabGUI extends Module {
 	
 	public int currentTab;
 	public boolean expanded;
-	public boolean shaders;
+	public boolean Tab;
 	
 	public TabGUI() {
 		super("TabGUI", Keyboard.KEY_NONE, Category.RENDER);
@@ -33,10 +34,10 @@ public class TabGUI extends Module {
 	
 	public void onEvent(Event e) {
 		
-		
 		if(e instanceof EventRenderGUI) {
 			FontRenderer fr = mc.fontRendererObj;
-			
+			if(Tab) {
+				
 			float hue = (System.currentTimeMillis() % 2000) / 2000f;
 			int color = Color.HSBtoRGB(hue, 1, 1);
 					
@@ -46,26 +47,19 @@ public class TabGUI extends Module {
 			Gui.drawRect(2, 12, 53, 71, 0x80000000);
 			Gui.drawRect(3, 14 + currentTab * 15 - 1, 52, 14 + currentTab * 15 + 11, primaryColor); //0x9993d3d3
 			}else {
-				Gui.drawRect(2, 26, 53, 82, 0x80000000);
-				Gui.drawRect(2, 12, 53, 26, 0x80000000);
-				Gui.drawRect(2, 12, 53, 26, 0x80000000);
-				Gui.drawRect(3, 14 + currentTab * 14 - 1, 52, 14 + currentTab * 14 + 11, 0xff87C0E1);
-				Gui.drawRect(2.5, 12, 2, 26, 0xffd3d3d3);
-				Gui.drawRect(53, 12, 52.5, 26, 0xffd3d3d3);
-				Gui.drawRect(2, 12.5, 53, 12, 0xffd3d3d3);
-				Gui.drawRect(2, 25.5, 53, 26, 0xffd3d3d3);
+				Gui.drawRect(1, 1, 52, 57, 0x80000000);
+				Gui.drawRect(2, 3 + currentTab * 14 - 1, 51, 3 + currentTab * 14 + 11, 0xff87C0E1);
+				Gui.drawRect(0.5, 0.5, 52.5, 1, 0xffd3d3d3); // top
+				Gui.drawRect(0.5, 57.5, 52.5, 57, 0xffd3d3d3); // bottom
+				Gui.drawRect(0.5, 0.5, 1, 57.5, 0xffd3d3d3); // left
+				Gui.drawRect(52.5, 0.5, 52, 57.5, 0xffd3d3d3); // right
 				
 			}
 			int count = 0;
 			for(Category c : Module.Category.values()) {
-				if(c.name.equals("Shaders")) {
-					fr.drawStringWithShadow("Modules", 5, 15 + count * 15, -1);
-					count++;
-				}else {
-				fr.drawStringWithShadow(c.name, 5, 15 + count * 14, -1);
+				fr.drawStringWithShadow(c.name, 4, 4 + count * 14, -1);
 			
 				count++;
-				}
 				
 			}
 			
@@ -79,44 +73,60 @@ public class TabGUI extends Module {
 				Gui.drawRect(54.5, 12, 130, 11 + modules.size() * 15, 0x80000000);
 				Gui.drawRect(55.5, 14 + category.moduleIndex * 15 - 1, 129, 14 + category.moduleIndex * 15 + 11, primaryColor);
 				}else {
-					Gui.drawRect(54.5, 12, 130, 12 + modules.size() * 14, 0x80000000);
-					Gui.drawRect(55.5, 14 + category.moduleIndex * 14 - 1, 129, 14 + category.moduleIndex * 14 + 11, 0xff87C0E1);
+					if(category.name.equals("Movement")) {
+						Gui.drawRect(53, 15, 130, 15 + modules.size() * 14 , 0x80000000);
+						Gui.drawRect(54, 17 + category.moduleIndex * 14 - 1, 129, 17 + category.moduleIndex * 14 + 11, 0xff87C0E1);
+					}else {
+					if(category.name.equals("Render")) {
+						Gui.drawRect(53,29, 130, 29 + modules.size() * 14 , 0x80000000);
+						Gui.drawRect(54, 31 + category.moduleIndex * 14 - 1, 129, 31 + category.moduleIndex * 14 + 11, 0xff87C0E1);
 					
+					}else {
+					if(category.name.equals("Player")) {
+						Gui.drawRect(53, 43, 130, 43 + modules.size() * 14 , 0x80000000);
+						Gui.drawRect(54, 45 + category.moduleIndex * 14 - 1, 129, 45 + category.moduleIndex * 14 + 11, 0xff87C0E1);
+					}else {
+					Gui.drawRect(53, 1, 130, 1 + modules.size() * 14 , 0x80000000);
+					Gui.drawRect(54, 3 + category.moduleIndex * 14 - 1, 129, 3 + category.moduleIndex * 14 + 11, 0xff87C0E1);
+							}
+						}
+					}
 				}
 				
 				count = 0;
 				for(Module m : modules) {
-					fr.drawStringWithShadow(m.name, 5 + 53, 15 + count * 14, -1);
-				
+					if(category.name.equals("Movement")) {
+						fr.drawStringWithShadow(m.name, 4 + 53, 18 + count * 14, -1);
+						if(m.toggled) 
+							Gui.drawRect(53, 16 + count * 14, 54.5, 28 + count * 14, 0xffd3d3d3);
+						fr.drawStringWithShadow(m.name, 4 + 53, 18 + count * 14, -1);
+						count++;
+					}else {
+					if(category.name.equals("Render")) {
+						fr.drawStringWithShadow(m.name, 4 + 53, 32 + count * 14, -1);
+						if(m.toggled) 
+							Gui.drawRect(53, 30 + count * 14, 54.5, 42 + count * 14, 0xffd3d3d3);
+						fr.drawStringWithShadow(m.name, 4 + 53, 32 + count * 14, -1);
+						count++;
+					}else {
+					if(category.name.equals("Player")) {
+						fr.drawStringWithShadow(m.name, 4 + 53, 46 + count * 14, -1);
+						if(m.toggled) 
+							Gui.drawRect(53, 44 + count * 14, 54.5, 56 + count * 14, 0xffd3d3d3);
+						fr.drawStringWithShadow(m.name, 4 + 53, 46 + count * 14, -1);
+						count++;
+					}else {
+					fr.drawStringWithShadow(m.name, 4 + 53, 4 + count * 14, -1);
+					if(m.toggled) 
+						Gui.drawRect(53, 2 + count * 14, 54.5, 14 + count * 14, 0xffd3d3d3);
+					fr.drawStringWithShadow(m.name, 4 + 53, 4 + count * 14, -1);
 					count++;
-				}
-				}
-		}
-		
-			if(shaders) {
-				Category category = Module.Category.values()[currentTab];
-				List<Module> modules = Present.getModulesByCategory(category );
-				FontRenderer fr = mc.fontRendererObj;
-				
-				Gui.drawRect(2, 26, 53, 82, 0xff000000);
-				Gui.drawRect(2, 12, 53, 26, 0xff000000);
-				Gui.drawRect(2, 12, 53, 26, 0xff000000);
-				Gui.drawRect(3, 14 + currentTab * 14 - 1, 52, 14 + currentTab * 14 + 11, 0xff87C0E1);
-				Gui.drawRect(2.5, 12, 2, 26, 0xffd3d3d3);
-				Gui.drawRect(53, 12, 52.5, 26, 0xffd3d3d3);
-				Gui.drawRect(2, 12.5, 53, 12, 0xffd3d3d3);
-				Gui.drawRect(2, 25.5, 53, 26, 0xffd3d3d3);
-				
-				int count = 0;
-				for(Category c : Module.Category.values()) {
-					if(c.name.equals("Shaders")) 
-					fr.drawStringWithShadow(c.name, 5, 15 + count * 14, -1);
-					count++;
-					fr.drawStringWithShadow("Sildurs", 5, 29, -1);
-					fr.drawStringWithShadow("BSL", 5, 43, -1);
-					fr.drawStringWithShadow("Seus", 5, 57, -1);
-					fr.drawStringWithShadow("Oceano", 5, 71, -1);
-				}	
+					}
+									}
+								}
+							}
+						}
+					}
 				}
 		if(e instanceof EventKey) {
 			int code = ((EventKey)e).code;
@@ -153,24 +163,23 @@ public class TabGUI extends Module {
 			}
 			
 			if(code == Keyboard.KEY_RIGHT) {
-				if(category.name.equals("Shaders")) {
-					shaders = true;
-				}else {
-				
 				if(expanded && modules.size() !=0) {
 					Module module = modules.get(category.moduleIndex);
 					if(!module.name.equals("TabGUI"))
 						module.toggle();
 				}else {
 					expanded = true;
-				}
+				
+		
 			}
 			}
 			
 			if(code == Keyboard.KEY_LEFT) {
 				expanded = false;
-				shaders = false;
+			}
 			
+			if(code == Keyboard.KEY_RCONTROL) {
+				Tab = true;
 			}
 		}
 	}

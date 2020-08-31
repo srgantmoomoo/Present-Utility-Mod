@@ -59,7 +59,6 @@ public class Module {
 	}
 	
 	public enum Category {
-		SHADERS("Shaders"),
 		COMBAT("Combat"),
 		MOVEMENT("Movement"),
 		RENDER("Render"),
